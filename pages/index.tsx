@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import Button from '@totallymoney/ui/components/Button';
 
 const Title = styled.h1`
   color: red;
@@ -12,7 +13,12 @@ interface CountProps {
 
 const Count: React.FunctionComponent<CountProps> = props => {
   const { count } = props;
-  return <Title>{count}</Title>;
+  return (
+    <>
+      <Title>{count}</Title>
+      <Button>Hi</Button>
+    </>
+  );
 };
 
 Count.defaultProps = {

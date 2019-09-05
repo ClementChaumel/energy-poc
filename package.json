@@ -9,6 +9,7 @@
     "lint": "eslint --ext .js --ext .tsx pages components"
   },
   "dependencies": {
+    "@totallymoney/ui": "^1.0.3",
     "next": "9.0.5",
     "react": "16.9.0",
     "react-dom": "16.9.0",
