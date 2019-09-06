@@ -11,7 +11,9 @@
     "update-snapshots": "jest test/unit -u",
     "test:e2e": "cypress open",
     "test:e2e:headless": "cypress run",
-    "test": "yarn lint && yarn test:unit"
+    "test": "yarn lint && yarn test:unit",
+    "build": "next build",
+    "export": "next build && next export"
   },
   "dependencies": {
     "@totallymoney/ui": "^1.0.3",
