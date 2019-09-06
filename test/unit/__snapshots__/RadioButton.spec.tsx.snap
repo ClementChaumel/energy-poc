@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton /> renders correctly 1`] = `
+.c0 {
+  background-color: white;
+  border: solid 1px #08051d;
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  text-align: left;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0:before {
+  content: '';
+  display: block;
+  height: 15px;
+  width: 15px;
+  background: white;
+  border: 1px solid #08051d;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+
+.c0:focus:before {
+  background-color: #08051d;
+  box-shadow: inset 0px 0px 0 2px white;
+}
+
+<button
+  className="c0"
+  id="both"
+  onClick={[Function]}
+  type="button"
+>
+  Both gas and electricity
+</button>
+`;
