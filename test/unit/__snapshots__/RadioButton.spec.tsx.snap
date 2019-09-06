@@ -37,6 +37,7 @@ exports[`<RadioButton /> renders correctly 1`] = `
 
 <button
   className="c0"
+  data-cy="radio-button"
   id="both"
   onClick={[Function]}
   type="button"

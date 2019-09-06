@@ -6,7 +6,12 @@
     "dev": "next dev -p 5555",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js --ext .tsx pages components"
+    "lint": "eslint --ext .js --ext .tsx pages components",
+    "test:unit": "jest test/unit",
+    "update-snapshots": "jest test/unit -u",
+    "test:e2e": "cypress open",
+    "test:e2e:headless": "cypress run",
+    "test": "yarn lint && yarn test:unit"
   },
   "dependencies": {
     "@totallymoney/ui": "^1.0.3",
