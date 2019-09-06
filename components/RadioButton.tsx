@@ -38,7 +38,7 @@ interface RadioButtonTypes {
 const RadioButton: React.SFC<RadioButtonTypes> = props => {
   const { onClick, label, id } = props;
   return (
-    <RButton type="button" onClick={onClick} id={id}>
+    <RButton type="button" onClick={onClick} id={id} data-cy="radio-button">
       {label}
     </RButton>
   );
