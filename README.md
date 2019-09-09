@@ -18,6 +18,15 @@ cd energy-poc
 yarn
 ```
 
+You'll also need to create a `.env` file like so
+
+```js
+API_KEY = [api - key];
+API_URL = [api - url];
+```
+
+The real values currently don't live anywhere so send me a private message and I'll send you a copy of my `.env`
+
 Then run the dev server with
 
 ```sh

@@ -12,11 +12,11 @@
     "test:e2e": "cypress open",
     "test:e2e:headless": "cypress run",
     "test": "yarn lint && yarn test:unit",
-    "build": "next build",
     "export": "next build && next export"
   },
   "dependencies": {
     "@totallymoney/ui": "^1.0.3",
+    "dotenv": "^8.1.0",
     "isomorphic-unfetch": "^3.0.0",
     "next": "9.0.5",
     "react": "16.9.0",
