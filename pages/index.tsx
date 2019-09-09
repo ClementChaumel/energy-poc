@@ -1,9 +1,11 @@
 import * as React from 'react';
+import Router from 'next/router';
 import styled from 'styled-components';
 import theme from '@totallymoney/ui/theme';
 import Hero from '@totallymoney/ui/components/Hero';
 import Grid from '@totallymoney/ui/components/Grid';
 import Text from '@totallymoney/ui/components/Text';
+import fetch from 'isomorphic-unfetch';
 
 import RadioButton from '../components/RadioButton';
 import GlobalNav from '../components/GlobalNav';
@@ -33,19 +35,33 @@ const HintWrapper = styled.div`
 
 const Index: React.SFC = () => {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const body = {
+      customerId: 'customerID',
+      key: 'comparisonType',
+      value: '',
+    };
     switch (e.currentTarget.id) {
       case 'both':
-        console.log('🌩️');
+        body.value = 'DUAL_FUEL';
         break;
       case 'gas':
-        console.log('💨');
+        body.value = 'GAS';
         break;
       case 'electricity':
-        console.log('⚡');
+        body.value = 'ELECTRICITY';
         break;
       default:
         console.log('🤷');
     }
+    fetch(process.env.API_URL, {
+      method: 'POST',
+      headers: new Headers({
+        'Content-Type': 'application/json',
+        'x-api-key': process.env.API_KEY,
+      }),
+      body: JSON.stringify(body),
+    });
+    Router.push('/result');
   };
 
   return (
